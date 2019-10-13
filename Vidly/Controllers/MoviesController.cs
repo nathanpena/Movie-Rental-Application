@@ -31,14 +31,20 @@ namespace Vidly.Controllers
             return View(viewModel);
         }
 
-        public ActionResult Index(int? pageIndex, string sortBy)
+        public ActionResult Index()
         {
-            if (!pageIndex.HasValue)
-                pageIndex = 1;
-            if (string.IsNullOrWhiteSpace(sortBy))
-                sortBy = "NAME";
+            var movies = new List<Movie>
+            {
+                new Movie {Name = "Batman"},
+                new Movie {Name = "Psycho"}
+            };
 
-            return Content($"pageIndex={pageIndex}&sortBy={sortBy}");
+            var viewModel = new IndexMovieViewModel
+            {
+                Movies = movies
+            };
+
+            return View(viewModel);
         }
 
         [Route("movies/released/{year}/{month:regex(\\d{2}):range(1,12)}")]
