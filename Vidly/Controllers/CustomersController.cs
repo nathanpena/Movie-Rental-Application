@@ -22,5 +22,11 @@ namespace Vidly.Controllers
             var viewModel = new IndexCustomerViewModel {Customers = customers};
             return View(viewModel);
         }
+
+        public ActionResult Details(int id)
+        {
+            var customer = new Customer {Id = id, Name = "Nathan Pena"};
+            return View(customer);
+        }
     }
 }
