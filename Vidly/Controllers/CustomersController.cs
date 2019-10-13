@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.Ajax.Utilities;
 using Vidly.Models;
 using Vidly.ViewModels;
 
@@ -31,8 +32,17 @@ namespace Vidly.Controllers
                 new Customer {Id = 2, Name = "Greg Solis"}
             };
 
+            var customer = customers.Find(c => c.Id == id);
+
+            if (customer != null)
+            {
+                return View(customer);
+            }
+            else
+            {
+                return HttpNotFound();
+            }
             
-            return View(customers.Find(c => c.Id == id));
         }
     }
 }
