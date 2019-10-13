@@ -25,8 +25,14 @@ namespace Vidly.Controllers
 
         public ActionResult Details(int id)
         {
-            var customer = new Customer {Id = id, Name = "Nathan Pena"};
-            return View(customer);
+            var customers = new List<Customer>
+            {
+                new Customer {Id = 1, Name = "John Pena"},
+                new Customer {Id = 2, Name = "Greg Solis"}
+            };
+
+            
+            return View(customers.Find(c => c.Id == id));
         }
     }
 }
