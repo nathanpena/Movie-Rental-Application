@@ -14,10 +14,7 @@ namespace Vidly.Controllers
         // GET: Customers
         public ActionResult Index()
         {
-            var customers = new List<Customer>();
-            customers.Add(new Customer {Id = 1, Name = "John Orlando"});
-            customers.Add(new Customer { Id = 2, Name = "Hailey Bieber" });
-            customers.Add(new Customer { Id = 3, Name = "Justin Bieber" });
+            var customers = GetCustomers();
 
             var viewModel = new IndexCustomerViewModel {Customers = customers};
             return View(viewModel);
@@ -25,24 +22,27 @@ namespace Vidly.Controllers
 
         public ActionResult Details(int id)
         {
-            var customers = new List<Customer>
+            var customer = GetCustomers().SingleOrDefault(c => c.Id == id);
+
+            if (customer == null)
+            {                
+                return HttpNotFound();
+            }
+            else
+            {
+                return View(customer);
+            }
+            
+        }
+
+        private IEnumerable<Customer> GetCustomers()
+        {
+            return new List<Customer>
             {
                 new Customer {Id = 1, Name = "John Orlando"},
                 new Customer {Id = 2, Name = "Hailey Bieber"},
                 new Customer { Id = 3, Name = "Justin Bieber" }
-        };
-
-            var customer = customers.Find(c => c.Id == id);
-
-            if (customer != null)
-            {
-                return View(customer);
-            }
-            else
-            {
-                return HttpNotFound();
-            }
-            
+            };
         }
     }
 }
