@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -44,17 +45,15 @@ namespace Vidly.Controllers
 
         public ActionResult Index()
         {
-
-            var viewModel = new IndexMovieViewModel { Movies = _context.Movies.ToList() };
-
-
+            
+            var viewModel = new IndexMovieViewModel { Movies = _context.Movies.Include(m => m.Genre).ToList() };           
             return View(viewModel);
         }
 
         public ActionResult Details(int id)
         {
 
-            return View(_context.Movies.SingleOrDefault(movie => movie.Id == id));
+            return View(_context.Movies.Include(m => m.Genre).SingleOrDefault(movie => movie.Id == id));
         }
 
         [Route("movies/released/{year}/{month:regex(\\d{2}):range(1,12)}")]

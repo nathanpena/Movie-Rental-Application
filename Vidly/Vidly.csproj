@@ -227,9 +227,30 @@
     <Compile Include="Migrations\201910140412134_AddMovies.Designer.cs">
       <DependentUpon>201910140412134_AddMovies.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910140422489_UpdateMovie.cs" />
+    <Compile Include="Migrations\201910140422489_UpdateMovie.Designer.cs">
+      <DependentUpon>201910140422489_UpdateMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910140424411_InsertGenre.cs" />
+    <Compile Include="Migrations\201910140424411_InsertGenre.Designer.cs">
+      <DependentUpon>201910140424411_InsertGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910140429471_UpdateMovie1.cs" />
+    <Compile Include="Migrations\201910140429471_UpdateMovie1.Designer.cs">
+      <DependentUpon>201910140429471_UpdateMovie1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910140438072_UpdateMovie2.cs" />
+    <Compile Include="Migrations\201910140438072_UpdateMovie2.Designer.cs">
+      <DependentUpon>201910140438072_UpdateMovie2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910140439379_SeedMovies.cs" />
+    <Compile Include="Migrations\201910140439379_SeedMovies.Designer.cs">
+      <DependentUpon>201910140439379_SeedMovies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -302,6 +323,7 @@
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Movies\Random.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -358,6 +380,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910140412134_AddMovies.resx">
       <DependentUpon>201910140412134_AddMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910140422489_UpdateMovie.resx">
+      <DependentUpon>201910140422489_UpdateMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910140424411_InsertGenre.resx">
+      <DependentUpon>201910140424411_InsertGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910140429471_UpdateMovie1.resx">
+      <DependentUpon>201910140429471_UpdateMovie1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910140438072_UpdateMovie2.resx">
+      <DependentUpon>201910140438072_UpdateMovie2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910140439379_SeedMovies.resx">
+      <DependentUpon>201910140439379_SeedMovies.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
