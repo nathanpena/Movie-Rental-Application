@@ -46,14 +46,5 @@ namespace Vidly.Controllers
 
         }
 
-        private IEnumerable<Customer> GetCustomers()
-        {
-            return new List<Customer>
-            {
-                new Customer {Id = 1, Name = "John Orlando"},
-                new Customer {Id = 2, Name = "Hailey Bieber"},
-                new Customer { Id = 3, Name = "Justin Bieber" }
-            };
-        }
     }
 }
