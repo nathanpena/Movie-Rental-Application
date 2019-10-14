@@ -5,21 +5,28 @@
 }
 
 <h1>Movies</h1>
-<table class="table table-hover table-bordered">
-    <thead>
-    <tr>
-        <th>Movie</th>
-    </tr>
-    </thead>
-    <tbody>
+@if (!Model.Movies.Any())
+{
+    <p>No movies currently added</p>
+}
+else
+{
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>Movie</th>
+            </tr>
+        </thead>
+        <tbody>
 
-    @foreach (var movie in Model.Movies)
-    {
-        <tr>
-            <td> @movie.Name</td>
-        </tr>
-    }
+            @foreach (var movie in Model.Movies)
+            {
+                <tr>
+                    <td> @Html.ActionLink(@movie.Name, "Details", "Movies", new { id = movie.Id }, null)</td>
+                </tr>
+            }
 
-    </tbody>
-</table>
+        </tbody>
+    </table>
+}
 

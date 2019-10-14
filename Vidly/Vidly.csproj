@@ -223,6 +223,10 @@
     <Compile Include="Migrations\201910140340366_MembershipTypeNameNotNullable.Designer.cs">
       <DependentUpon>201910140340366_MembershipTypeNameNotNullable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910140412134_AddMovies.cs" />
+    <Compile Include="Migrations\201910140412134_AddMovies.Designer.cs">
+      <DependentUpon>201910140412134_AddMovies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -351,6 +355,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910140340366_MembershipTypeNameNotNullable.resx">
       <DependentUpon>201910140340366_MembershipTypeNameNotNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910140412134_AddMovies.resx">
+      <DependentUpon>201910140412134_AddMovies.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
