@@ -68,8 +68,13 @@ namespace Vidly.Controllers
             return View(viewModel);
         }
 
-        public ActionResult Create()
+        [HttpPost]
+        public ActionResult Create(Movie movie)
         {
+            movie.DateAdded = DateTime.Today;
+            _context.Movies.Add(movie);
+            _context.SaveChanges();
+            
             return RedirectToAction("Index", "Movies");
         }
 
