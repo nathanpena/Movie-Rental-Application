@@ -53,7 +53,7 @@ namespace Vidly.Controllers
         public ActionResult Details(int id)
         {
 
-            return View(_context.Movies.Include(m => m.Genre).SingleOrDefault(movie => movie.Id == id));
+            return View(GetMovie(id));
         }
 
         public ActionResult New()
@@ -78,6 +78,28 @@ namespace Vidly.Controllers
             return RedirectToAction("Index", "Movies");
         }
 
+        public ActionResult Edit(int id)
+        {
+
+            var viewModel = new MovieFormViewModel
+            {
+                Genres = GetGenres(),
+                Movie = GetMovie(id)
+            };
+
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Update(Movie movie)
+        {
+            var dbMovie = GetMovie(movie.Id);
+            Map(dbMovie, movie);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Movies");
+        }
+
         [Route("movies/released/{year}/{month:regex(\\d{2}):range(1,12)}")]
         public ActionResult ByRelaseDate(int year, int month)
         {
@@ -89,5 +111,17 @@ namespace Vidly.Controllers
             return _context.Genres.ToList();
         }
 
+        private Movie GetMovie(int id)
+        {
+            return _context.Movies.Include(m => m.Genre).SingleOrDefault(movie => movie.Id == id);
+        }
+
+        private void Map(Movie dbMovie, Movie movie)
+        {
+            dbMovie.Name = movie.Name;
+            dbMovie.ReleaseDate = movie.ReleaseDate;
+            dbMovie.GenreId = movie.GenreId;
+            dbMovie.NumberInStock = movie.NumberInStock;
+        }
     }
 }
