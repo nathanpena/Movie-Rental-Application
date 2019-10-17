@@ -267,6 +267,18 @@
     <Compile Include="Migrations\201910140439379_SeedMovies.Designer.cs">
       <DependentUpon>201910140439379_SeedMovies.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910162351421_SeedUsers.cs" />
+    <Compile Include="Migrations\201910162351421_SeedUsers.Designer.cs">
+      <DependentUpon>201910162351421_SeedUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910170014284_AddDrivingLicenseToApplicationUser.cs" />
+    <Compile Include="Migrations\201910170014284_AddDrivingLicenseToApplicationUser.Designer.cs">
+      <DependentUpon>201910170014284_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910170130471_AddPhoneToApplicationUser.cs" />
+    <Compile Include="Migrations\201910170130471_AddPhoneToApplicationUser.Designer.cs">
+      <DependentUpon>201910170130471_AddPhoneToApplicationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -275,6 +287,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\RoleName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\IndexCustomerViewModel.cs" />
@@ -519,7 +532,7 @@
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Movies\Random.cshtml" />
-    <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\List.cshtml" />
     <Content Include="Views\Movies\Details.cshtml" />
     <Content Include="Views\Customers\New.cshtml" />
     <Content Include="Views\Customers\_CustomerForm.cshtml" />
@@ -527,6 +540,7 @@
     <Content Include="Views\Movies\New.cshtml" />
     <Content Include="Views\Movies\_MovieForm.cshtml" />
     <Content Include="Views\Movies\Edit.cshtml" />
+    <Content Include="Views\Movies\ReadOnlyList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -598,6 +612,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910140439379_SeedMovies.resx">
       <DependentUpon>201910140439379_SeedMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910162351421_SeedUsers.resx">
+      <DependentUpon>201910162351421_SeedUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910170014284_AddDrivingLicenseToApplicationUser.resx">
+      <DependentUpon>201910170014284_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910170130471_AddPhoneToApplicationUser.resx">
+      <DependentUpon>201910170130471_AddPhoneToApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
