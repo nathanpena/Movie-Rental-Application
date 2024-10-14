@@ -1,15 +1,26 @@
 
-# Vidly Movie Rental Application
+# Movie Rental Application
 
 This project showcases a movie rental application built using the .NET framework. It includes full-stack development of customer and movie management functionality, highlighting my skills in data processing, API development, and front-end rendering.
 
 ## Overview
 
-The Vidly Movie Rental App is designed to handle customer and movie data, providing various features such as:
+The Movie Rental App is designed to handle customer and movie data, providing various features such as:
 - Creating, editing, and viewing customer and movie records
 - API endpoints for managing customer and movie data
 - Integration with a relational database to store and retrieve data
 - Role-based authentication and access control
+
+### Database Integration and SQL Skills
+
+The application is tightly integrated with a relational database (SQL Server) to manage customer and movie data. Through this project, I have demonstrated the following database-related skills:
+
+- **Database Design**: I designed and implemented the database schema, which includes tables for customers, movies, genres, and membership types. This showcases my ability to structure and normalize data for efficient storage and retrieval.
+- **SQL Queries**: I wrote complex SQL queries to support the application's functionality, including filtering, joining, and aggregating data to generate useful insights and reports.
+- **Data Manipulation**: Implemented Create, Read, Update, and Delete (CRUD) operations using both raw SQL and Entity Framework, showcasing my proficiency in manipulating data directly in a database.
+- **Optimization**: Optimized database queries and ensured that the database is structured to handle large volumes of data efficiently, which is crucial in data engineering roles where performance and scalability are key.
+
+This integration of database systems within a web application underscores my proficiency with SQL, data modeling, and backend data management, all of which are crucial in data engineering and data analyst roles.
 
 ### Skills Demonstrated:
 
